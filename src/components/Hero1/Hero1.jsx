@@ -5,28 +5,17 @@ import Button from '../Button/Button';
 
 const Hero1 = () =>{
     return (
-      <Carousel interval={5000000}>
+      <Carousel interval={5000}>
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='https://firebasestorage.googleapis.com/v0/b/termomelga.appspot.com/o/heros%2Fhero1Mobile.jpg?alt=media&token=464481d1-1d29-44aa-8bcf-f5a17a24ea7b'
+            src='https://firebasestorage.googleapis.com/v0/b/cebate-un-mate.appspot.com/o/Frame.jpg?alt=media&token=e5a67121-433e-4016-a3fb-fc47a873335f'
             alt="First-slide"
           />
           <Carousel.Caption className='HeroCaption hero12'>
             <Button label='Comprar' to='/productos' />
           </Carousel.Caption>
         </Carousel.Item> 
-        
-        <Carousel.Item className='Hero1Container'>
-          <img
-            className="imgHero1"
-            src='https://firebasestorage.googleapis.com/v0/b/termomelga.appspot.com/o/heros%2Fhero1.jpg?alt=media&token=403b9243-1506-4708-8c4e-bb1acc5b3a4c'
-            alt="Second-slide"
-          />
-          <Carousel.Caption className='HeroCaption hero3'>
-            <Button label='Ver Mates' to='/categoria/mates'  />
-          </Carousel.Caption>
-        </Carousel.Item>
 
         <Carousel.Item className='Hero1Container'>
           <img
