@@ -9,7 +9,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='https://firebasestorage.googleapis.com/v0/b/cebate-un-mate.appspot.com/o/Frame.jpg?alt=media&token=e5a67121-433e-4016-a3fb-fc47a873335f'
+            src='https://firebasestorage.googleapis.com/v0/b/cebate-un-mate.appspot.com/o/hero1.jpg?alt=media&token=29e16988-c699-4970-86e8-c03d093f778c'
             alt="First-slide"
           />
           <Carousel.Caption className='HeroCaption hero12'>
@@ -20,7 +20,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1 imgHero3"
-            src='https://firebasestorage.googleapis.com/v0/b/termomelga.appspot.com/o/heros%2Fhero2Mobile.jpg?alt=media&token=4cb2bbe6-1b10-4e1b-a40e-31911921aa98'
+            src='https://firebasestorage.googleapis.com/v0/b/cebate-un-mate.appspot.com/o/hero2.jpg?alt=media&token=d078af5e-f035-4f0a-9624-26469ff23972'
             alt="Third-slide"
           />
           <Carousel.Caption className='HeroCaption hero12'>

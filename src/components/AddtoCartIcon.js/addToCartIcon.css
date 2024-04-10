@@ -1,7 +1,7 @@
 .carrito{
     display: flex;
     height: 2em;
-    background-color: #00000000;
+    background-color: #ffffff00;
     border: none;
     
 }.carrito:hover{
@@ -10,7 +10,7 @@
 }
 
 .carrito svg{
-    color: #000;
+    color: #ffffff;
     width: 40px;
     height: 40px;
 }
