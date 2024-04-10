@@ -17,7 +17,7 @@ import ColorPicker from '../ColorPicker/ColorPicker';
 export default function ProductInfo({ id, nombre, precio, img1, img2, img3, descripcion, descuento = 0, categoria, colors }) {
 
   const [index, setIndex] = useState(0);
-  
+
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
@@ -28,11 +28,11 @@ export default function ProductInfo({ id, nombre, precio, img1, img2, img3, desc
   const useCart = () => {
     return useContext(CartContext)
   }
-  
+
   const { addItem, quantity, formatearMoneda, calcularDescuento } = useCart();
   const handleOnAdd = (quantity) => {
     const productToAdd = {
-      id, nombre, precio, quantity, img1, img2, descuento,  indexColor
+      id, nombre, precio, quantity, img1, img2, descuento, indexColor
     }
     addItem(productToAdd)
   }
@@ -65,7 +65,14 @@ export default function ProductInfo({ id, nombre, precio, img1, img2, img3, desc
           )}
 
           <h5>Categoria: {categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h5>
-          
+          <div className="infoPayment">
+            <h5>Metodos de Pago:</h5>
+            <div className="paymentMethods">
+              <div className="paymentItem"><CreditCardIcon /><span>Debito</span></div>
+              <div className="paymentItem"><AccountBalanceIcon /><span>Transf. Bancaria</span></div>
+              <div className="paymentItem"><LocalAtmIcon /><span>Efectivo</span></div>
+            </div>
+          </div>
           <div className="envios"><h5>Envios a Todo el Pais </h5><LocalShippingIcon /></div>
         </motion.div>
         <motion.div
