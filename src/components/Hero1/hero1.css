@@ -25,9 +25,7 @@
 
 }
 
-.carousel.slide > div.carousel-indicators{
-    display: none;
-}
+
 @media (max-width: 1200px ){
     
     .hero3{
@@ -68,5 +66,10 @@
     }
     
     
+}
+@media screen and (max-width: 768px){
+    .carousel.slide > div.carousel-indicators{
+        display: none;
+    }
 }
 
