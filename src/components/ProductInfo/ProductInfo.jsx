@@ -14,7 +14,7 @@ import ColorPicker from '../ColorPicker/ColorPicker';
 
 
 
-export default function ProductInfo({ id, nombre, precio, img1, img2, img3, descripcion, descuento = 0, categoria, colors }) {
+export default function ProductInfo({ id, nombre, precio, img1, descripcion, descuento = 0, categoria }) {
 
   const [index, setIndex] = useState(0);
 
@@ -32,7 +32,7 @@ export default function ProductInfo({ id, nombre, precio, img1, img2, img3, desc
   const { addItem, quantity, formatearMoneda, calcularDescuento } = useCart();
   const handleOnAdd = (quantity) => {
     const productToAdd = {
-      id, nombre, precio, quantity, img1, img2, descuento, indexColor
+      id, nombre, precio, quantity, img1, descuento, 
     }
     addItem(productToAdd)
   }

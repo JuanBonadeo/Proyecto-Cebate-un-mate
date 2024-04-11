@@ -22,6 +22,7 @@
     flex-direction: column;
     margin: 0 auto;
     gap: 1em;
+    
 }
 .productInCart{
     display: flex;
@@ -48,14 +49,18 @@
     align-items: center;
     gap: 1em;
 
+}.imgName h4{
+    color: #ffffff;
+}
 
-}.controls{
+.controls{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-right: 2em;
     gap: 2em;
+    color: #ffffff;
 }
 .quantityControl{
     display: flex;
@@ -67,10 +72,11 @@
     border: solid 1px #656565;
     border-radius: .66em;
     user-select: none;
+    color: #ffffff;
 }
 .quantityControl button{
     background-color: rgba(10, 10, 10, 0);
-    color: #000;
+    color: #ffffff;
     border: none;
     cursor: pointer;
 }.quantityControl button:hover{
@@ -80,6 +86,7 @@
 }
 .price{
     margin-top: 1em;
+    color: #ffffff;
 }
 .delete{
     cursor: pointer;

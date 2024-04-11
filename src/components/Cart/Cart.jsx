@@ -44,7 +44,7 @@ const Cart = () => {
                             
                             className='productInCart' key={prod.id}>
                                 <div className="imgName">
-                                  <Link to={`/producto/${prod.id}`}><img className="" src={prod.img}></img>  </Link> 
+                                  <Link to={`/producto/${prod.id}`}><img className="" src={prod.img1}></img>  </Link> 
                                   <Link to={`/producto/${prod.id}`}><h4 className='title'>{prod.nombre}</h4></Link>
                                 </div>
                                 <div className="controls"> 
