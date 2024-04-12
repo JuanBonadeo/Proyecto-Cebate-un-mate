@@ -57,7 +57,7 @@ export const Admin = () => {
                     <label htmlFor="name">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required />
                     <label htmlFor="stock">Stock:</label>
-                    <input type="checkbox" id="stock" name="stock" />
+                    <input type="checkbox" id="stock" name="stock" className='stock' />
                 </div>
                 <div className="form-group">
                     <label htmlFor="price">Precio:</label>

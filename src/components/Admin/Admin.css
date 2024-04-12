@@ -14,3 +14,7 @@ form{
     display: flex;
     
 }
+.stock{
+    height: 1em;
+    width: 1em;
+}
