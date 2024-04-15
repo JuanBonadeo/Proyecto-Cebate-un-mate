@@ -14,7 +14,7 @@ import ColorPicker from '../ColorPicker/ColorPicker';
 
 
 
-export default function ProductInfo({ id, nombre, precio, img1, descripcion, descuento = 0, categoria }) {
+export default function ProductInfo({ id, nombre, precio, img1, img2, img3, descripcion, descuento = 0, categoria }) {
 
   const [index, setIndex] = useState(0);
 
