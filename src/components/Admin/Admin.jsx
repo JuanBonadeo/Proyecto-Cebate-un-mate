@@ -48,7 +48,7 @@ export const Admin = () => {
 
     const addProduct = async (e) => {
         e.preventDefault();
-        const productFolderRef = ref(storage, `productos/${category}/${nombre}`);
+        const productFolderRef = ref(storage, `products/${category}/${nombre}`);
 
         let imageUrl1 = '';
         if (image1) {
