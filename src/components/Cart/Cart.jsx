@@ -79,7 +79,7 @@ const Cart = () => {
       className="btnTotal">
         <h5>Total de la compra: {formatearMoneda(total)}</h5>
         <Button action={() => clearCart()} label="Vaciar"/>    
-        <Button to={'/terminarcompra/'} label="Iniciar Compra"/>       
+        <Button to={'/codigodescuento/'} label="Iniciar Compra"/>       
       </motion.div>
             
 

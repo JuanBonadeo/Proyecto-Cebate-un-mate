@@ -9,15 +9,16 @@ const FinishPurchase = () => {
     const useCart = () => {
         return useContext(CartContext)
     }
-    const { cart, total, calcularDescuento, formatearMoneda, clearCart2 } = useCart();
-
+    let { cart, total, calcularDescuento, formatearMoneda, clearCart2, descuentoCodigo } = useCart();
     const precioEnvio = 5000;
     const precioEnvioGratis = 50000;
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     const [entrega, setEntrega] = useState('envio');
+    total = total - (total * descuentoCodigo);
     let [totalFinal, setTotalFinal] = useState(total);
+
 
     const handleChange = (event) => {
         const selectedOption = event.target.value;
@@ -28,6 +29,7 @@ const FinishPurchase = () => {
             setTotalFinal(total);
         }
     };
+   
     
 
     const buyCart = (e) => {
@@ -121,12 +123,13 @@ const FinishPurchase = () => {
                         <input type="text" id="address" name="address" required />
                     </div>
                 </div>
-
+                {descuentoCodigo > 0 && <h4>Descuento por codigo del {descuentoCodigo * 100}%</h4>}
                 <h4>Total: {`${formatearMoneda(total)} ${entrega === 'envio' && total >= precioEnvioGratis ? ' envio gratis' : ''}
                  ${entrega === 'envio' && total < precioEnvioGratis ? '+ ' + formatearMoneda(precioEnvio) + ' de envio' : ''}`}</h4>
                 {entrega === 'envio' && total < precioEnvioGratis && <h5>Envío gratis a partir de {formatearMoneda(precioEnvioGratis)}.</h5>}
                 <button className="Button" type='submit'>Comprar</button>
             </form>
+            
         </div>
     );
 }

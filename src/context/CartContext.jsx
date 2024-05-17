@@ -18,6 +18,7 @@ export const Toast = Swal.mixin({
 export const CartProvider = ({ children }) => {
   const initialCart = JSON.parse(localStorage.getItem('cart')) || []
   const [cart, setCart] = useState(initialCart)
+  const [descuentoCodigo, setDescuentoCodigo] = useState(0);
   // Actualizar localStorage cada vez que cambia el carrito
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -141,7 +142,7 @@ export const CartProvider = ({ children }) => {
     return total
   }
 
-  const total = getTotal()
+  let total = getTotal()
 
 
   const clearCart = () => {
@@ -167,9 +168,8 @@ export const CartProvider = ({ children }) => {
 
 
 
-
   return (
-    <CartContext.Provider value={{ cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart, updateQuantity, updateQuantitySelect, formatearMoneda, calcularDescuento, clearCart2 }}>
+    <CartContext.Provider value={{ cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart, updateQuantity, updateQuantitySelect, formatearMoneda, calcularDescuento, clearCart2, descuentoCodigo, setDescuentoCodigo}}>
       {children}
     </CartContext.Provider>
   )
